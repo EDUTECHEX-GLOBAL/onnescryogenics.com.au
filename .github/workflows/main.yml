@@ -1,0 +1,29 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      -    # Trigger only on this 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code from the GitHub repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Set up SSH for connecting to the EC2 instance
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
+
+      # Run the deployment script on the EC2 instance
+      - name: Run deployment script
+        run: |
+          ssh -o StrictHostKeyChecking=no ubuntu@onnes.in <<EOF
+            echo "✅ Running deploy.sh script on EC2..." 
+            sudo bash /home/ubuntu/deploy.sh 
+          EOF
