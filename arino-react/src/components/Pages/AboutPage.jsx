@@ -51,54 +51,47 @@ export default function AboutPage() {
 {/* About Us Section */}
 <Spacing lg="150" md="80" />
       <Div className="container" id="about-us">
-        <Div className="row">
-          <Div className="col-xl-5 col-lg-7">
-            <h1>ABOUT US</h1>
-            <Spacing lg="30" md="20" />
-            <p className="cs-m0">
-  Onnes Cryogenics was formed in Hyderabad, India by physicists
-  <span className="nowrap"> Dr. Ram Aluru</span>, who specialises in cryogenics, and
-  <span className="nowrap"> Dr. Vikram Srinivasa Raghavan</span>, whose expertise is in composite engineering and nanophysics. The founding team’s experience spans across industries such as space, defence, cryogenics and high pressure gases with a perfect blend for cryogenic composites.
-</p>
-<p>
-  Inspired by India's space and atomic energy journey with phenomenal contributions from physicists
-  <span className="nowrap"> Dr. Vikram Sarabhai</span> and
-  <span className="nowrap"> Dr. Homi J Bhabha</span>, the team at Onnes are committed to innovating next-generation storage technologies integrated with bespoke cryogenic systems.
-</p>
+  <Div className="row">
+    <Div className="col-lg-12">
+      <h1>ABOUT US</h1>
+      <Spacing lg="30" md="20" />
+      <p className="cs-m0">
+        Onnes Cryogenics was formed in Hyderabad, India by physicists
+        <span className="nowrap"> Dr. Ram Aluru</span>, who specialises in cryogenics, and
+        <span className="nowrap"> Dr. Vikram Srinivasa Raghavan</span>, whose expertise is in composite engineering and nanophysics.
+        The founding team’s experience spans across industries such as space, defence, cryogenics and high pressure gases with a perfect blend for cryogenic composites.
+        Inspired by the generation of great physicists who propelled new innovations across the cosmos to serve society in an impactful manner.
+      </p>
+      <Spacing lg="20" md="15" />
+      <p>
+        Inspired by Global space and atomic energy journeys with phenomenal contributions coming from physicists such as
+        <span className="nowrap"> Dr. Richard Feynman</span> and
+        <span className="nowrap"> Dr. Robert Oppenheimer</span> who are bestowed with a rare combination of a scientist - innovator and a visionary,
+        the team at Onnes are committed to innovate next generation storage technologies integrated with bespoke cryogenic systems.
+      </p>
+      <Spacing lg="30" md="30" />
+      <Div className="cs-separator cs-accent_bg" />
+      <Spacing lg="65" md="40" />
+    </Div>
+  </Div>
 
-            <Spacing lg="30" md="30" />
-            <Div className="cs-separator cs-accent_bg" />
-            <Spacing lg="65" md="40" />
-          </Div>
+  <Div className="row">
+    <Div className="col-lg-12 text-center">
+  <img
+    src="/images/aboutus_1.jpg"
+    alt="About"
+    className="cs-radius_15"
+    style={{
+      marginTop: "20px",
+      maxWidth: "800px",
+      width: "100%",
+      height: "auto",
+    }}
+  />
+</Div>
+  </Div>
+</Div>
 
-          <Div className="col-lg-5 offset-xl-2 d-flex align-items-center">
-            <img
-              src="/images/aboutus_2.png"
-              alt="About"
-              className="w-100 cs-radius_15"
-            />
-            <Spacing lg="25" md="25" />
-          </Div>
-        </Div>
-
-        <Div className="row">
-          <Div className="col-lg-7">
-            <img
-              src="/images/aboutus_1.jpg"
-              alt="About"
-              className="w-100 cs-radius_15"
-              style={{ marginTop: "20px" }}
-            />
-          </Div>
-          <Div className="col-lg-5">
-            <img
-              src="/images/vikramsarabhai1.jpg"
-              alt="About"
-              className="w-100 cs-radius_15"
-            />
-          </Div>
-        </Div>
-      </Div>
       <Spacing lg="75" md="55" />
 
       {/* Fun Fact Section */}
