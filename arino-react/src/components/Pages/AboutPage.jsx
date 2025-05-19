@@ -56,7 +56,7 @@ export default function AboutPage() {
       <h1>ABOUT US</h1>
       <Spacing lg="30" md="20" />
       <p className="cs-m0">
-        Onnes Cryogenics was formed in Hyderabad, India by physicists
+        Onnes Cryogenics was formed by physicists
         <span className="nowrap"> Dr. Ram Aluru</span>, who specialises in cryogenics, and
         <span className="nowrap"> Dr. Vikram Srinivasa Raghavan</span>, whose expertise is in composite engineering and nanophysics.
         The founding team’s experience spans across industries such as space, defence, cryogenics and high pressure gases with a perfect blend for cryogenic composites.
