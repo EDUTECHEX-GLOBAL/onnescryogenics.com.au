@@ -7,7 +7,7 @@ const timelineData = [
   [
     {
       year: '2024',
-      name: 'Startup India',
+      name: 'Startup Australia',
       position: 'Awarded grants',
       type: 'Space and Ground',
     },

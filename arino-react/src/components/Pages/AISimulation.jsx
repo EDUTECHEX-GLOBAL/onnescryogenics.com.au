@@ -14,7 +14,7 @@ const spaceProjects = [
     id: "1",
     title: "Cryogenic Fluid Management (CFM)",
     subtitle: "Deep Space Exploration",
-    img: "/images/cfg.webp",
+    // Image removed for project id:1
     category: "High Pressure Gases",
     TypeofTanks: "Type-3 and Type-4 tanks",
     RelevantSegments: "Space, Ground, Defence",
@@ -59,22 +59,18 @@ const spaceProjects = [
         </p>
 
         <p className="ai-paragraph">
-          One of the major challenges in{" "}
-          <strong>cryogenic fluid storage</strong> is the continual loss of
-          cryogens over time, caused by their tendency to{" "}
-          <strong>boil off at warmer temperatures</strong>. To minimize this
+          One of the major challenges in <strong>cryogenic fluid storage</strong> is the continual loss of
+          cryogens over time, caused by their tendency to <strong>boil off at warmer temperatures</strong>. To minimize this
           loss, <strong>multilayer insulation</strong> is used as a passive
           control method. While this helps reduce boil-off for short durations,
           it is not sufficient for long-term storage.
         </p>
 
         <p className="ai-paragraph">
-          To actively prevent heat from reaching the cryogenic propellants,{" "}
-          <strong>cryocoolers</strong>
+          To actively prevent heat from reaching the cryogenic propellants,<strong>cryocoolers</strong>
           are employed. These function similarly to refrigerators by removing
-          heat, resulting in
-          <strong> minimal or zero propellant loss</strong> — a system known as
-          a<strong> "zero-boiloff system."</strong>
+          heat, resulting in<strong> minimal or zero propellant loss</strong> — a system known as
+a<strong> "zero-boiloff system."</strong>
         </p>
 
         <p className="ai-heading">
@@ -126,30 +122,23 @@ const spaceProjects = [
           missions.
         </p>
         <p>
-          To achieve this advancement, Onnes is focusing on{" "}
-          <strong>Zero Boil-Off (ZBO)</strong> and{" "}
-          <strong>Reduced Boil-Off (RBO)</strong> strategies. Unlike current
+          To achieve this advancement, Onnes is focusing on <strong>Zero Boil-Off (ZBO)</strong> and <strong>Reduced Boil-Off (RBO)</strong> strategies. Unlike current
           short-duration, gravity-insensitive, passive pressure control systems,
           ZBO and RBO rely on<strong>active operations</strong> to ensure
           reliable, cost-effective, and efficient storage and transfer of
           cryogenic propellants with <strong>minimal fuel loss.</strong>.
         </p>
         <p>
-          These advanced strategies involve a{" "}
-          <strong>
-            complex combination of dynamic forced mixing and energy removal{" "}
-          </strong>{" "}
-          in a two-phase, multi-component propellant system. The goal is to
+          These advanced strategies involve a <strong>
+            complex combination of dynamic forced mixing and energy removal 
+          </strong> in a two-phase, multi-component propellant system. The goal is to
           control tank temperature and pressure throughout various storage and
           transfer operations.
         </p>
         <p>
-          A future large-scale{" "}
-          <strong>Cryogenic Fluid Management (CFM) Demonstration</strong> for
+          A future large-scale <strong>Cryogenic Fluid Management (CFM) Demonstration</strong> for
           in-space refueling will aim to test these operations. These may
-          involve{" "}
-          <strong>either segregated or interpenetrated fluid phases,</strong>{" "}
-          which can be composed of single or multiple condensable and
+          involve <strong>either segregated or interpenetrated fluid phases,</strong> which can be composed of single or multiple condensable and
           non-condensable species.
         </p>
       </div>
@@ -186,42 +175,43 @@ export default function AISimulation() {
 
       {spaceProjects.map((project, idx) => (
         <React.Fragment key={project.id}>
-          <Spacing lg="80" md="40" />
-          <Div className="container">
-            <h2
-              id={sectionIds[idx]}
-              className="cs-page_title cs-center cs-font_50 cs-font_30_sm cs-m0"
+    <Spacing lg="80" md="40" />
+    <Div className="container">
+      <h2
+        id={sectionIds[idx]}
+        className="cs-page_title cs-center cs-font_50 cs-font_30_sm cs-m0"
+      >
+        {sectionHeadings[idx]}
+      </h2>
+    </Div>
+    <Spacing lg="30" md="20" />
+
+    {/* Only render image for project 2 */}
+    <Div className="container">
+      {project.id === "2" && (
+        <img
+          src={project.img}
+          alt={project.title}
+          className="cs-radius_15 w-100"
+        />
+      )}
+    </Div>
+
+    <Spacing lg="75" md="55" />
+    <Div className="container">
+      <Spacing lg="90" md="40" />
+      <Div className="row">
+        {project.id === "2" ? (
+          <Div className="col-lg-12">
+            <SectionHeading
+              title={project.title}
+              subtitle={project.subtitle}
             >
-              {sectionHeadings[idx]}
-            </h2>
-          </Div>
-          <Spacing lg="30" md="20" />
+              <Spacing lg="40" md="20" />
+              {project.description}
+            </SectionHeading>
 
-          <Div className="container">
-            <img
-              src={project.img}
-              alt={project.title}
-              className="cs-radius_15 w-100"
-            />
-            {project.id === "2" && <p className="cs-center mt-2"></p>}
-          </Div>
-
-          <Spacing lg="75" md="55" />
-
-          <Div className="container">
-            <Spacing lg="90" md="40" />
-            <Div className="row">
-              {project.id === "2" ? (
-                <Div className="col-lg-12">
-                  <SectionHeading
-                    title={project.title}
-                    subtitle={project.subtitle}
-                  >
-                    <Spacing lg="40" md="20" />
-                    {project.description}
-                  </SectionHeading>
-
-                  {/* Images stacked vertically below the text */}
+              {/* Images stacked vertically below the text */}
                   <Spacing lg="40" md="30" />
                   <div className="d-flex flex-column align-items-center">
                     <div
@@ -310,7 +300,7 @@ export default function AISimulation() {
                       title={project.title}
                       subtitle={project.subtitle}
                     >
-                      <Spacing lg="40" md="20" />
+                      {/* <Spacing lg="40" md="20" /> */}
                       {project.description}
                     </SectionHeading>
                   </Div>
